@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmritiNER System Architecture & Flowchart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      padding: 40px;
+      width: 1400px;
+      height: 900px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 16px;
+    }
+    .title-group h1 {
+      font-size: 28px;
+      font-weight: 900;
+      color: #065f46;
+      letter-spacing: -0.5px;
+    }
+    .title-group p {
+      font-size: 14px;
+      color: #64748b;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .badge {
+      background: #dcfce7;
+      color: #166534;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #86efac;
+    }
+    .flow-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .column {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      border: 2px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .col-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 12px;
+    }
+    .col-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: #047857;
+      color: white;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .col-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .box-card {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .box-card.highlight {
+      background: #ecfdf5;
+      border-color: #34d399;
+    }
+    .box-card.alert {
+      background: #fffbeb;
+      border-color: #fcd34d;
+    }
+    .box-card.danger {
+      background: #fff1f2;
+      border-color: #fda4af;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-desc {
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.4;
+    }
+    .connector-banner {
+      background: #0f172a;
+      color: white;
+      border-radius: 16px;
+      padding: 16px 24px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .connector-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .arrow-icon {
+      color: #34d399;
+      font-size: 18px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title-group">
+      <h1>SmritiNER: End-to-End System Architecture & Flowchart</h1>
+      <p>Problem ID: SIH26003 • Ministry of Development of North Eastern Region (MDoNER)</p>
+    </div>
+    <div class="badge">100% OFFLINE-FIRST PWA</div>
+  </div>
+
+  <div class="flow-container">
+    
+    <!-- Tier 1 -->
+    <div class="column">
+      <div>
+        <div class="col-header">
+          <div class="col-num">1</div>
+          <div class="col-title">Patient Interaction Tier</div>
+        </div>
+
+        <div class="box-card highlight">
+          <div class="card-title">👵 Senior-Accessible UI</div>
+          <div class="card-desc">WCAG AAA High Contrast mode (amber/black), >52px tactile targets, zero confusing nested menus.</div>
+        </div>
+
+        <div class="box-card">
+          <div class="card-title">🗣️ Regional Voice Synthesis</div>
+          <div class="card-desc">Natural Web Speech audio prompts in Assamese (অসমীয়া), Meitei (মৈতৈলোন্), Bengali (বাংলা), and Hindi.</div>
+        </div>
+
+        <div class="box-card">
+          <div class="card-title">🧩 4 Cognitive Game Domains</div>
+          <div class="card-desc">Memory Recall (NER Heritage), Attention Focus (Motifs), Daily Living Sequence, and Pattern Weave Builder.</div>
+        </div>
+      </div>
+
+      <div class="box-card alert">
+        <div class="card-title">🍃 Agitation Calming Zone</div>
+        <div class="card-desc">Non-pharmacological sensory relief: 4-4-4 breathing circle + procedural folk bamboo flute melodies.</div>
+      </div>
+    </div>
+
+    <!-- Tier 2 -->
+    <div class="column">
+      <div>
+        <div class="col-header">
+          <div class="col-num" style="background:#0284c7;">2</div>
+          <div class="col-title">AI Adaptive Engine & Offline Core</div>
+        </div>
+
+        <div class="box-card highlight">
+          <div class="card-title">⚡ Touch Latency Telemetry</div>
+          <div class="card-desc">Records touch reaction time ($L_{obs}$), decision hesitation, and error runs in real-time with zero lag.</div>
+        </div>
+
+        <div class="box-card">
+          <div class="card-title">🧠 Mathematical Scaffolding Engine</div>
+          <div class="card-desc">$\Delta L = \alpha(Target - Observed) + \beta(Acc - 0.75)$. Auto-triggers audio clues if hesitation >6.0s.</div>
+        </div>
+
+        <div class="box-card alert">
+          <div class="card-title">❤️ Cognitive Fatigue Index (F_score)</div>
+          <div class="card-desc">Monitors stamina. If fatigue >75%, gracefully lowers difficulty or recommends a peaceful tea break.</div>
+        </div>
+      </div>
+
+      <div class="box-card">
+        <div class="card-title">💾 Local IndexedDB Persistence</div>
+        <div class="card-desc">100% offline local queue; caches session telemetry and medication compliance for remote hilly zones.</div>
+      </div>
+    </div>
+
+    <!-- Tier 3 -->
+    <div class="column">
+      <div>
+        <div class="col-header">
+          <div class="col-num" style="background:#4f46e5;">3</div>
+          <div class="col-title">Caregiver & Clinician Portal</div>
+        </div>
+
+        <div class="box-card highlight">
+          <div class="card-title">📊 MoCA / MMSE Domain Radar</div>
+          <div class="card-desc">Standardized radar metrics: Delayed Recall (78%), Attention (84%), Visuospatial (80%), Routine (86%).</div>
+        </div>
+
+        <div class="box-card alert">
+          <div class="card-title">⚠️ Early Decline Anomaly Detector</div>
+          <div class="card-desc">Evaluates 7-day rolling latency curves and flags acute cognitive drops before irreversible decline.</div>
+        </div>
+
+        <div class="box-card danger">
+          <div class="card-title">🚨 GPS Safe-Zone Wandering Guard</div>
+          <div class="card-desc">Simulates a 300m safety perimeter around residence; triggers immediate SMS/push alert on breach.</div>
+        </div>
+      </div>
+
+      <div class="box-card">
+        <div class="card-title">🖨️ One-Click Clinical PDF Report</div>
+        <div class="card-desc">Compiles patient history, medication adherence, and latency graphs for Guwahati / CHC hospital visits.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="connector-banner">
+    <div class="connector-item">
+      <span>Patient Interaction</span>
+      <span class="arrow-icon">➔</span>
+    </div>
+    <div class="connector-item">
+      <span>AI Latency & Fatigue Evaluation</span>
+      <span class="arrow-icon">➔</span>
+    </div>
+    <div class="connector-item">
+      <span>Dynamic Audio Scaffolding</span>
+      <span class="arrow-icon">➔</span>
+    </div>
+    <div class="connector-item">
+      <span>Local IndexedDB Queue</span>
+      <span class="arrow-icon">➔</span>
+    </div>
+    <div class="connector-item">
+      <span>Caregiver MoCA Analytics & GPS Safe Zone</span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -18,6 +18,22 @@ export default function App() {
   const [flowchartModalOpen, setFlowchartModalOpen] = useState(false);
   const [sosModalOpen, setSosModalOpen] = useState(false);
 
+  // Allow URL query parameters for direct view navigation (e.g. ?view=games, ?view=caregiver, ?view=flowchart)
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const requestedView = params.get('view');
+      if (requestedView === 'caregiver') {
+        setCurrentMode('caregiver');
+        setActiveView('caregiver');
+      } else if (requestedView === 'games' || requestedView === 'companion' || requestedView === 'calm') {
+        setActiveView(requestedView);
+      } else if (requestedView === 'flowchart') {
+        setFlowchartModalOpen(true);
+      }
+    }
+  }, []);
+
   const handleModeChange = (newMode) => {
     setCurrentMode(newMode);
     if (newMode === 'caregiver') {
