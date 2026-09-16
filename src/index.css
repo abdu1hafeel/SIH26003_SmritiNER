@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+}
+
+/* Senior Accessibility Utilities */
+.high-contrast {
+  filter: contrast(1.25);
+}
+
+.text-scale-large {
+  font-size: 1.15em;
+}
+
+.touch-target {
+  min-height: 52px;
+  min-width: 52px;
+}
+
+/* Calming Ambient Gradients for Elderly Cognitive Care */
+.bg-ner-calm {
+  background: linear-gradient(135deg, #f8fafc 0%, #f0fdf4 50%, #ecfdf5 100%);
+}
+
+.bg-tea-gradient {
+  background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
+}
+
+.bg-golden-silk {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 50%, #92400e 100%);
+}
+
+/* Card flip animation for memory games */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
